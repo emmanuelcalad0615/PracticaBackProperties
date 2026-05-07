@@ -8,7 +8,7 @@ class User {
   password: string;
 
   constructor({ email, password }: UserProps) {
-    if (!email || !email.includes('@') || !email.includes('.com')) {
+    if (!email || !email.includes('@')) {
       throw new Error('Email inválido');
     }
     if (!password || password.length < 6) {
